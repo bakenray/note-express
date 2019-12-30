@@ -139,7 +139,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Toast  = __webpack_require__(/*! ../mod/toast.js */ \"./src/js/mod/toast.js\").Toast;\r\nToast('我是toast',3000)\n\n//# sourceURL=webpack:///./src/js/app/index.js?");
+eval("var Toast  = __webpack_require__(/*! ../mod/toast.js */ \"./src/js/mod/toast.js\").Toast;\r\nToast('我是toast',2000)\n\n//# sourceURL=webpack:///./src/js/app/index.js?");
 
 /***/ }),
 
@@ -161,7 +161,7 @@ eval("/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARR
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var $ = __webpack_require__(/*! jquery */ \"./src/js/lib/jquery-2.0.3.min.js\")\r\n__webpack_require__(/*! less/toast.less */ \"./src/less/toast.less\")\r\nfunction toast(msg,time){\r\n    this.msg = msg;\r\n    this.dismissTime = time || 2000;\r\n    this.createToast();\r\n    this.showToast();\r\n}\r\ntoast.prototype = {\r\n    createToast:function(){\r\n        var tpl = '<div class=\"toast\"> + this.msg + </div>';\r\n        this.$toast = $(tpl);\r\n        $('body').append(this.$toast);\r\n    },\r\n    showToast:function(){\r\n        var self = this;\r\n        this.$toast.fadeIn(500,function(){\r\n            setTimeout(function(){\r\n                self.$toast.fadeOut(500,function(){\r\n                    self.$toast.remove();\r\n                })\r\n            },self.dismissTime);\r\n        })\r\n    }\r\n};\r\nfunction Toast(msg,time){\r\n    return new toast(msg,time);\r\n}\r\nmodule.exports.Toast = Toast\n\n//# sourceURL=webpack:///./src/js/mod/toast.js?");
+eval("var $ = __webpack_require__(/*! jquery */ \"./src/js/lib/jquery-2.0.3.min.js\")\r\n__webpack_require__(/*! less/toast.less */ \"./src/less/toast.less\")\r\nfunction toast(msg,time){\r\n    this.msg = msg;\r\n    this.dismissTime = time || 2000;\r\n    this.createToast();\r\n    this.showToast();\r\n}\r\ntoast.prototype = {\r\n    createToast:function(){\r\n        var tpl = '<div class=\"toast\"> + this.msg + </div>';\r\n        this.$toast = $(tpl);\r\n        $('body').append(this.$toast);\r\n    },\r\n    showToast:function(){\r\n        var self = this;\r\n        this.$toast.fadeIn(300,function(){\r\n            setTimeout(function(){\r\n                self.$toast.fadeOut(300,function(){\r\n                    self.$toast.remove();\r\n                })\r\n            },self.dismissTime);\r\n        })\r\n    }\r\n};\r\nfunction Toast(msg,time){\r\n    return new toast(msg,time);\r\n}\r\nmodule.exports.Toast = Toast\n\n//# sourceURL=webpack:///./src/js/mod/toast.js?");
 
 /***/ }),
 
